@@ -1,19 +1,17 @@
 import React from 'react'
-import { Link, Route } from 'react-router-dom'
-import * as Routes from './../../constants/routes'
+import { Link } from 'react-router-dom'
+import * as ROUTES from './../../constants/routes'
 
-const Navigation = () => {
-    return (
-        <nav>
-            <ul>
-                <li><Link to={Routes.SIGN_IN}>Sign In</Link></li>
-                <li><Link to={Routes.LANDING}>Landing</Link></li>
-                <li><Link to={Routes.HOME}>Home</Link></li>
-                <li><Link to={Routes.ACCOUNT}>Account</Link></li>
-                <li><Link to={Routes.ADMIN}>Admin</Link></li>
-            </ul>
-        </nav>
-    )
-}
+const Navigation = () => (
+    <nav>
+        <ul>
+            <li><Link to={ROUTES.SIGN_IN}>Sign In</Link></li>
+            <li><Link to={ROUTES.LANDING}>Landing</Link></li>
+            <li><Link to={ROUTES.HOME}>Home</Link></li>
+            <li><Link to={ROUTES.ACCOUNT}>Account</Link></li>
+            <li><Link to={ROUTES.ADMIN}>Admin</Link></li>
+        </ul>
+    </nav>
+)
 
 export default Navigation
