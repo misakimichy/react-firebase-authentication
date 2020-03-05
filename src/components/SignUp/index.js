@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Link, withRouter } from 'react-router-dom'
+import { compose } from 'recompose'
 import { withFirebase } from './../Firebase'
 import * as ROUTES from './../../constants/routes'
 
@@ -50,7 +51,7 @@ class SignUpFormBase extends Component {
     render() {
         const { username, email, passwordOne, passwordTwo, error } = this.state
 
-        const isValidId = passwordOne !== passwordTwo || passwordOne === '' || email === '' || username === ''
+        const isInvalidId = passwordOne !== passwordTwo || passwordOne === '' || email === '' || username === ''
         return(
             <form onSubmit={this.onSubmit}>
                 <input
@@ -81,7 +82,7 @@ class SignUpFormBase extends Component {
                     type='password'
                     placeholder='Confirm password'
                 />
-                <button disabled={isValidId} type='submit'>Sign Up</button>
+                <button disabled={isInvalidId} type='submit'>Sign Up</button>
                 {error && <p>{error.message}</p>}
             </form>
         )
@@ -95,6 +96,6 @@ const SignUpLink = () => (
     </p>
 )
 
-const SignUpForm = withRouter(withFirebase(SignUpFormBase))
+const SignUpForm = compose(withRouter, withFirebase)(SignUpFormBase)
 export default SignUpPage
 export { SignUpForm, SignUpLink }
