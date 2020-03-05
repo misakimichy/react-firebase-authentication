@@ -11,6 +11,8 @@ Create a React app for authentication wit Firebase.
 
 
 ## Credit
+- Thank you [Robin Wieruch](https://www.robinwieruch.de/) for the great tutorial: [A Firebase in React Tutorial for Beginners 2019](https://www.robinwieruch.de/complete-firebase-authentication-react-tutorial)
+
 - Application favicon is [Sheep by Freepik](https://www.flaticon.com/authors/freepik). It's available at [favicon.com](https://www.flaticon.com)
 
 ## Installation:
