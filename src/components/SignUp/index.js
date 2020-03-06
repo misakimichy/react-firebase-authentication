@@ -74,6 +74,7 @@ class SignUpFormBase extends Component {
                     onChange={this.onChange}
                     type='password'
                     placeholder='Password'
+                    autoComplete='on'
                 />
                 <input
                     name='passwordTwo'
@@ -81,6 +82,7 @@ class SignUpFormBase extends Component {
                     onChange={this.onChange}
                     type='password'
                     placeholder='Confirm password'
+                    autoComplete='on'
                 />
                 <button disabled={isInvalidId} type='submit'>Sign Up</button>
                 {error && <p>{error.message}</p>}

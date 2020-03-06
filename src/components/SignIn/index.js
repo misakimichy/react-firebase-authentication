@@ -7,7 +7,7 @@ import * as ROUTES from './../../constants/routes'
 
 const SignInPage = () => (
     <div>
-    <h1>SignIn</h1>
+    <h1>Sign In</h1>
     <SignInForm />
     <SignUpLink />
 </div>
@@ -60,11 +60,12 @@ class SignInFormBase extends Component {
                 <input
                     name='password'
                     value={password}
-                    onChange={this.Change}
+                    onChange={this.onChange}
                     type='password'
                     placeholder='Password'
+                    autoComplete='on'
                 />
-                <button disable={isInvalidId} type='submit'>Sign In</button>
+                <button disabled={isInvalidId} type='submit'>Sign In</button>
                 {error && <p>{error.message}</p>}
             </form>
         )
